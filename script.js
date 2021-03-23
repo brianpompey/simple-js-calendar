@@ -24,7 +24,20 @@ function load() {
     });
     
     const paddingDays = days.indexOf(dateString.split(', ')[0]);
-    console.log(paddingDays);
+    
+    for(let i =1; i <= paddingDays + daysInMonth; i++) {
+        const daySquare = document.createElement('div');
+        daySquare.classList.add('day');
+
+        if (i > paddingDays) {
+            daySquare.innerText = i - paddingDays;
+
+            daySquare.addEventListener('click', () => console.log('click'));
+        } else {
+            daySquare.classList.add('padding');
+        }
+        calendar.appendChild(daySquare);
+    }
 
 }
 
