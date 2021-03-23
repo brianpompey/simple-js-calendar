@@ -29,12 +29,12 @@ body {
   #container {
     width: 770px;
   }
-  #weekdays {
+  #days {
     width: 100%;
     display: flex;
     color: #247BA0;
   }
-  #weekdays div {
+  #days div {
     width: 100px;
     padding: 10px;
   }
