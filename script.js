@@ -16,7 +16,8 @@ function openModal(date) {
     const eventForDay = events.find(e => e.date == clicked);
 
     if (eventForDay) {
-        console.log('Event exists')
+        document.getElementById('eventText').innerText = eventForDay.title;
+        deleteEventModal.style.display = 'block';
     } else {
         newEventModal.style.display = 'block';
     }
