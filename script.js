@@ -67,6 +67,14 @@ function load() {
 
 }
 
+function closeModal() {
+    newEventModal.style.display = 'none';
+    backDrop.style.display = 'none';
+    eventTitleInput.value = '';
+    clicked = null;
+    load();
+}
+
 function initButtons() {
     document.getElementById('nextButton').addEventListener('click', () => {
         nav++;
@@ -77,6 +85,9 @@ function initButtons() {
         nav--;
         load();
     })
+
+    document.getElementById('saveButton')
+    document.getElementById('cancelButton').addEventListener('click', closeModal);
 }
 
 initButtons();
